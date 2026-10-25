@@ -10,7 +10,7 @@
 (function(){
  const root=document.getElementById('pftu-archive');if(root.dataset.ready)return;root.dataset.ready='1';
  // REPLACE with the public HTTPS URL where you host tracks.json.
- const DATA_URL='REPLACE_WITH_PUBLIC_TRACKS_JSON_URL';
+ const DATA_URL='https://dptvn54kvn-alt.github.io/Music-archive-/tracks.json';
  const q=root.querySelector('#pftu-query'),year=root.querySelector('#pftu-year'),sort=root.querySelector('#pftu-sort'),results=root.querySelector('#pftu-results'),count=root.querySelector('#pftu-count'),more=root.querySelector('#pftu-more');
  let data=[],visible=50,filtered=[];
  function el(tag,cls,txt){const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=txt;return n}
