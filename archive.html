@@ -21,3 +21,4 @@
  fetch(DATA_URL).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(rows=>{if(!Array.isArray(rows))throw Error('Invalid data');data=rows;[...new Set(data.map(x=>(x.date||'').slice(0,4)).filter(Boolean))].sort().reverse().forEach(y=>{const opt=el('option','',y);opt.value=y;year.append(opt)});render()}).catch(e=>{count.textContent='Unable to load archive: '+e.message;console.error(e)});
 })();
 </script>
+fetch('/tracks.json')
